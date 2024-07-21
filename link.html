@@ -114,7 +114,7 @@
 
         if (amount && transactionNote) {
           const encodedNote = encodeURIComponent(transactionNote);
-          const paymentLink = `https://xtasy.in/payments?amount=${amount}&transactionNote=${encodedNote}`;
+          const paymentLink = `https://xtasy.in/link?amount=${amount}&transactionNote=${encodedNote}`;
           document.getElementById(
             "result"
           ).innerHTML = `<p>Generated Link:</p><a href="${paymentLink}" target="_blank" id="paymentLink">${paymentLink}</a>`;
