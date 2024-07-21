@@ -1,0 +1,319 @@
+/*? Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap");
+/*? Global  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*? Variables  */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+.showcase,
+.mid-titles,
+.atn-grab {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/** Page Content */
+/*? Main space  */
+main {
+  margin: 0 1rem;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*? Header  */
+header {
+  position: sticky;
+  /*! Positioning  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*! Sizing  */
+  padding: 0.5rem;
+  /*!Fonts  */
+  font-family: "Jacques Francois", serif;
+  font-size: 0.7rem;
+}
+
+header a {
+  font-family: "poppins", sans-serif;
+  color: white;
+  background-color: black;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.6rem;
+}
+header {
+  position: sticky;
+  top: 0; /* Stick to the top */
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.74);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: rgba(119, 125, 132, 0.2) 0px 8px 24px;
+}
+/*? Offer Cards  */
+
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* ----- */
+  margin-top: 1.5rem;
+  /* --- */
+  font-family: "Poppins", sans-serif;
+}
+
+.o-tag-line {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.o-description {
+  margin-top: 0.451rem;
+  transform: translateX(3px);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #4d4d4f;
+}
+
+.o-btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.65rem;
+  font-weight: 400;
+  background-color: #7856e7;
+  color: white;
+  transform: translateX(3.5px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.btn-bl {
+  background-color: #1d77ff;
+}
+
+.btn-lb {
+  background-color: #63b9f9;
+}
+
+.o-pic img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+/* Animation keyframes */
+@keyframes beatAnimationL {
+  0%,
+  100% {
+    transform: scale(1);
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1);
+    transform: translate(-10px, -10px);
+  }
+}
+
+@keyframes beatAnimationR {
+  0%,
+  100% {
+    transform: scale(1);
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1);
+    transform: translate(10px, -10px);
+  }
+}
+
+.op-a img {
+  transform: translate(15px, -10px);
+  animation: beatAnimationR 9s linear 1000;
+}
+.op-b img {
+  transform: translate(-10px, -12px);
+  animation: beatAnimationL 9s linear 1000;
+}
+.op-c img {
+  transform: translate(10px, -6px);
+  animation: beatAnimationR 9s linear 1000;
+}
+
+/*? Showcase  */
+.mid-titles {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.s-case {
+  width: 85vw;
+  height: 25vh;
+  margin: auto;
+  margin-top: 1.3rem;
+}
+.s-tile {
+  width: 100%;
+  height: 100%;
+}
+
+.s-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.enlarged {
+  transform: scale(1.2); /* Adjust the scale factor for enlargement */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  z-index: 2; /* Ensure the enlarged image is on top of others */
+}
+
+/*? Clients  */
+.clients {
+  margin: 0 -1rem;
+  margin-left: -0.5rem;
+  overflow: visible;
+  margin-bottom: 3rem;
+}
+
+.clients h2 {
+  margin-top: 3.3rem;
+}
+.c-case {
+  overflow: visible;
+  margin-top: 1.5rem;
+}
+.c-tile {
+  width: 32vw;
+  height: 32vw;
+  border-radius: 15px;
+  margin-left: 2rem;
+  box-shadow: -2.5px 2.5px 0.5px #0000004e; /* Horizontal offset, vertical offset, blur radius, color */
+  background-color: #ffffff;
+}
+
+.c-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+/*? Why Us  */
+.atn-grab {
+  font-size: 2.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.point {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-icon {
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(4px);
+  margin-right: 0.4rem;
+}
+.point span {
+  font-size: 0.85rem;
+  width: 40vw;
+  margin: 1rem 0;
+}
+
+.s-bold {
+  font-weight: 700;
+}
+
+.why-us {
+  font-family: "Poppins", sans-serif;
+}
+.ldt {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: block;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right, #303030 0%, black 100%);
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+
+/*? Footer   */
+footer {
+  margin: 0 -1rem;
+  background-color: #0f1117;
+  color: white;
+  overflow: hidden;
+  padding-top: 1rem;
+  font-family: "poppins", sans-serif;
+}
+footer h1 {
+  margin-bottom: 1.5rem;
+}
+
+.f-trans {
+  transform: translateX(0.5rem);
+}
+
+/*?Flickity  */
+.flickity-viewport {
+  height: 36vw !important ;
+}
+.s-case .flickity-viewport {
+  height: 25vh !important ;
+}
+/*? Flickity Arrows  */
+/* Hide the left arrow */
+.flickity-prev-next-button.previous {
+  display: none;
+}
+/* Additional styles for arrows */
+.flickity-prev-next-button.next {
+  width: 25px; /* Set the width */
+  height: 25px; /* Set the height */
+  background-color: black; /* Set the background color */
+  color: #fff; /* Set the text color */
+  border-radius: 50%; /* Make it circular */
+  opacity: 0.85;
+}
+.flickity-prev-next-button.next:hover {
+  background-color: #4d4d4f; /* Change color on hover */
+}
+
+/* Custom size for Flickity slider dots */
+.dot {
+  width: 6px !important;
+  height: 6px !important;
+  margin: 0 7px !important;
+}
+/*? For Desktops */
+
+@media only screen and (min-width: 768px) {
+}

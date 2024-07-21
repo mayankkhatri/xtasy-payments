@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>X</h1>
+      <a href="" class="contact">Contact</a>
+    </header>
+    <main>
+      <div class="animation">
+        <img
+          src="https://i.postimg.cc/zfRmShMj/download-4.gif"
+          alt="payment animation"
+        />
+      </div>
+      <div class="payment-request">
+        <h2>Payment Requested</h2>
+        <p class="amount shine" id="payment-amount">₹0</p>
+      </div>
+      <div class="payment-method">
+        <h3>Choose Payment Method</h3>
+        <div class="method upi" id="upi">
+          <h4>Pay via UPI</h4>
+          <div class="upi-details">
+            <!-- UPI fields or QR code -->
+            <div class="upi-logos">
+              <a class="logo-placeholder">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-256/free-paytm-226448.png?f=webp&w=256"
+                  alt="payment logo"
+                />
+              </a>
+              <a class="logo-placeholder">
+                <img
+                  src="https://qph.cf2.quoracdn.net/main-qimg-9954b3d9fafc15e261cd1e3e81d9fdca"
+                  alt="payment logo"
+                />
+              </a>
+              <a class="logo-placeholder">
+                <img
+                  src="https://i.pinimg.com/736x/8d/ec/e1/8dece15cc40aaf66ed47f6591b639d06.jpg"
+                  alt="payment logo"
+                />
+              </a>
+              <a class="logo-placeholder">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968202.png"
+                  alt="payment logo"
+                />
+              </a>
+              <a class="logo-placeholder">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/7/7c/CRED_%28FinTech_company%29_logo.png"
+                  alt="payment logo"
+                />
+              </a>
+            </div>
+            <div class="qr-details">
+              <p>Or</p>
+              <img src="" alt="Scan to Pay" id="qr-code" />
+              <p class="scan-text">Scan to pay</p>
+            </div>
+          </div>
+        </div>
+        <div class="method net-banking" id="net-banking">
+          <h4>Net banking</h4>
+          <div class="net-banking-logos">
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+          </div>
+        </div>
+        <div class="method card" id="card">
+          <h4>Card</h4>
+          <div class="card-logos">
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+            <a class="logo-placeholder">
+              <img src="" alt="payment logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="payment-btn">
+        <a href="" class="payment-button" id="payment-button"
+          >Pay via UPI Apps</a
+        >
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>

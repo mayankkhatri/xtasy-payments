@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #3b3b3b;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+header {
+  position: sticky;
+  /*! Positioning  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*! Sizing  */
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+  /*!Fonts  */
+  font-family: "Jacques Francois", serif;
+  font-size: 0.8rem;
+}
+
+header a {
+  font-family: "poppins", sans-serif;
+  color: white;
+  background-color: black;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+header {
+  position: sticky;
+  top: 0; /* Stick to the top */
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.74);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: rgba(119, 125, 132, 0.2) 0px 8px 24px;
+}
+
+.animation,
+.animation img {
+  height: 20vh;
+  width: 20vh;
+  margin: 0.2rem auto;
+}
+
+.payment-request {
+  text-align: center;
+}
+
+.payment-request h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #3b3b3b;
+  font-weight: 500;
+}
+
+.amount {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  margin-top: 0.7rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.payment-method h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.upi-logos {
+  margin-top: 10px;
+}
+
+.method {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid #ebeaeb;
+  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
+    -0.5px -0.5px 4px rgba(0, 0, 0, 0.03);
+}
+
+.method.selected {
+  border: 2px solid #007bff;
+}
+
+.payment-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5433ff;
+  padding: 0.4rem 0;
+}
+.payment-button {
+  display: block;
+  padding: 10px 20px;
+  background: #5433ff;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+.payment-button:hover {
+  background: #280ac2;
+}
+
+.method h4 {
+  margin: 0;
+}
+
+.upi-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-details {
+  text-align: center;
+  margin: 0;
+  color: #575757;
+  margin-top: -1rem;
+}
+
+.qr-details p {
+  font-size: 0.7rem;
+}
+.qr-details p:nth-child(1) {
+  color: #007bff;
+}
+
+.scan-text {
+  margin-top: 0;
+}
+
+#qr-code {
+  width: 150px;
+  height: 150px;
+}
+
+.logo-placeholder {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 12px;
+}
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.upi-logos,
+.net-banking-logos,
+.card-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.shine {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: skewX(-30deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 50%;
+  }
+}

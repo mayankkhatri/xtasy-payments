@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Payment Link</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        margin: 0 1rem;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff7e5f;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-group input:focus {
+        outline: none;
+        border-color: #ff7e5f;
+      }
+      .btn {
+        background: #ff7e5f;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .btn:hover {
+        background: #feb47b;
+      }
+      .result {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .result a {
+        color: #ff7e5f;
+        text-decoration: none;
+      }
+      .result a:hover {
+        text-decoration: underline;
+      }
+      .copy-btn {
+        margin-top: 10px;
+        background: #4caf50;
+      }
+      .copy-btn:hover {
+        background: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate Payment Link</h1>
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount" />
+      </div>
+      <div class="form-group">
+        <label for="transactionNote">Transaction Note</label>
+        <input
+          type="text"
+          id="transactionNote"
+          placeholder="Enter transaction note"
+        />
+      </div>
+      <button class="btn" onclick="generateLink()">Generate Link</button>
+      <div class="result" id="result"></div>
+      <button
+        class="btn copy-btn"
+        id="copyBtn"
+        style="display: none"
+        onclick="copyLink()"
+      >
+        Copy Link
+      </button>
+    </div>
+
+    <script>
+      function generateLink() {
+        const amount = document.getElementById("amount").value;
+        const transactionNote =
+          document.getElementById("transactionNote").value;
+
+        if (amount && transactionNote) {
+          const encodedNote = encodeURIComponent(transactionNote);
+          const paymentLink = `https://xtasy.in/payments?amount=${amount}&transactionNote=${encodedNote}`;
+          document.getElementById(
+            "result"
+          ).innerHTML = `<p>Generated Link:</p><a href="${paymentLink}" target="_blank" id="paymentLink">${paymentLink}</a>`;
+          document.getElementById("copyBtn").style.display = "inline-block";
+        } else {
+          document.getElementById(
+            "result"
+          ).innerHTML = `<p style="color: red;">Please enter both amount and transaction note.</p>`;
+          document.getElementById("copyBtn").style.display = "none";
+        }
+      }
+
+      function copyLink() {
+        const paymentLink = document.getElementById("paymentLink").href;
+        navigator.clipboard
+          .writeText(paymentLink)
+          .then(() => {
+            alert("Payment link copied to clipboard!");
+          })
+          .catch((err) => {
+            alert("Failed to copy link: ", err);
+          });
+      }
+    </script>
+  </body>
+</html>
